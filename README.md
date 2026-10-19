@@ -1,5 +1,7 @@
 # Entrance Detector with LINE Alerts
 
+<img src="images/device.jpg" alt="Assembled device: NodeMCU ESP8266 with an HC-SR04 ultrasonic sensor" width="500">
+
 A high school project: a low-cost device that notices when someone passes through a doorway and sends a notification to LINE. It runs on an ESP8266 (NodeMCU) board with an HC-SR04 ultrasonic sensor, is written in C/C++ with the Arduino IDE, and reaches LINE through IFTTT webhooks.
 
 The code is uploaded as I wrote it back then. I only removed my credentials, translated the comments to English, and used the config variables inside the URL instead of repeating the literal values.
@@ -43,6 +45,9 @@ Pins used in the sketch:
 - The board connected to Wi-Fi and recovered from failed connections automatically.
 - The sensor returned usable distance readings, which the sketch compared against the threshold.
 - IFTTT was triggered successfully, and LINE alerts were delivered when someone passed.
+<img src="images/line-alerts.png" alt="LINE Notify alerts triggered during a test run" width="300">
+
+*Test run: LINE Notify alerts triggered by the device. Several alerts fired within the same minute because the sketch has no cooldown.*
 
 ## Known issues and ideas
 
